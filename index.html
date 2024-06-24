@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Order Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Product Order Form</h1>
+        <form id="orderForm" onsubmit="submitForm(event)">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="category">Category:</label>
+                <select id="category" name="category" onchange="filterProducts()">
+                    <option value="">Select a category</option>
+                    <option value="spruce">Spruce</option>
+                    <option value="bricks">Brick</option>
+                    <option value="sandstone">Sandstone</option>
+                    <option value="andesite">Andesite</option>
+                </select>
+            </div>
+            <div id="products" class="products-grid"></div>
+            <button type="submit" class="btn">Submit Order</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
